@@ -30,10 +30,45 @@
 1.8HTML 更换文本的颜色
 1.9使用CSS选择器定义标签
 1.10使用一个CSS Class去给标签定义Style
+<style>
+.red-text{
+color: red;
+}
+</style>
 1.11HTML 为多个元素使用CSS类定义样式
+
+<style>
+.red-text {
+color: red;
+}
+</style>
+
+<p2 class="red-text">html编程入门教程</p2>
+
+<p class="red-text">在大家心目中，也许编程是一件非常困难的事情，其实也是一件非常有乐趣的事情，只要掌握好编程入门的方法，就能慢慢进入一个全新的创造世界。</p>
+
 1.12HTML HTML 设置标签的字体大小
+<style>
+  .red-text {
+    color: red;
+  }
+  p{
+  font-size:16px;
+  }
+</style>
+
 1.13HTML 设置标签的字体样式
 1.14引入Google字体
+<style>
+.red-text {
+color: red;
+font-family:Lobster;
+}
+p {
+font-size: 16px;
+font-family: Monospace;
+}
+</style>
 1.15HTML 处理多个字体降级
 1.16HTML 给页面添加图片
 1.17HTML 调整网页里图片大小
@@ -43,6 +78,9 @@
 1.21HTML 设置链接锚元素外部页面
 1.22HTML 在p标签内设置锚链接
 1.23HTML 使用#符合设置固定链接
+
+<p>Click here for <a href=#>cat photos</a>.</p>
+
 1.24HTML 为图片设置超链接
 1.25HTML 为图片添加alt描述
 1.26HTML 创建项目符号无序列表
@@ -55,6 +93,10 @@
 1.33HTML 添加单选框
 1.34HTML 添加复选框
 1.35HTML 使用checked属性设置复选框和单选框默认被选中
+
+<label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+<label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+
 1.36HTML 在div元素中嵌套多个元素
 1.37HTML 为div元素设置背景颜色
 1.38HTML 为标签添加ID属性
