@@ -131,7 +131,7 @@ font-family: Monospace;
 1.64 CSS 使用rgb属性设定绿色
 1.65 CSS 使用rgb属性设定蓝色
 1.66 CSS 使用rgb属性设定混合颜色
-###2.在w3cshool复习JavaScript的知识
+###2.在w3cshool复习JavaScript的知识（重点）
 2.1理解JavaScript未定义变量
 
     var a=5;
