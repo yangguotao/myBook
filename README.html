@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/yangguotao/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.2.9/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+       
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="mybook">myBook</h1>
+
+<h1 class="mume-header" id="&#x575A;&#x6301;&#x6BCF;&#x5929;&#x4F7F;&#x7528;&#x7409;&#x7483;&#x8AAA;app&#x7EC3;&#x4E60;&#x82F1;&#x8BED;-&#x575A;&#x6301;">坚持每天使用琉璃說APP练习英语     ———坚持</h1>
+
+<h2 class="mume-header" id="&#x5B89;&#x88C5;&#x7BC7;">安装篇</h2>
+
+<h3 class="mume-header" id="&#x5B89;&#x88C5;ubuntu-1604&#x7CFB;&#x7EDF;">安装ubuntu 16.04系统</h3>
+
+<p>1.在ubuntu官网下载ubuntu 16.04ISO<br>
+2.利用u盘安装ubuntu 16.04系统<br>
+3.安装路径<br>
+4.空间分配<br>
+5.源更新方法</p>
+<h2 class="mume-header" id="&#x5B89;&#x88C5;vscoed">安装vscoed</h2>
+
+<p>1.在vscoed官网下载vscoed对应的版本安装</p>
+<h2 class="mume-header" id="&#x5728;vscode&#x4E0A;&#x5B89;&#x88C5;markdown&#x63D2;&#x4EF6;">在VScode上安装Markdown插件</h2>
+
+<h2 class="mume-header" id="&#x5B89;&#x88C5;git">安装git</h2>
+
+<p>1.安装git==》sudo apt-get install git-core<br>
+2.一些全局变量的初始化<br>
+在本地建立一个文件夹，然后做一些全局变量的初始化<br>
+git config --global <a href="http://user.name">user.name</a> 用户名或者用户ID<br>
+git config --global user.email 你邮箱<br>
+这两个选项会在以后你提交代码至本地仓库时自动填写到你的提交记录中去.</p>
+<h2 class="mume-header" id="&#x590D;&#x4E60;&#x7BC7;">复习篇</h2>
+
+<h3 class="mume-header" id="1&#x5728;w3cshool&#x590D;&#x4E60;h5&#x7684;&#x77E5;&#x8BC6;">1.在w3cshool复习H5的知识</h3>
+
+<p>1.1开始学习HTML标签<br>
+1.2HTML 学习h2标签<br>
+1.3HTML 学习p标签<br>
+1.4删除HTML的注释<br>
+1.5HTML注释语句学习<br>
+1.6HTML用占位符文本填补空白<br>
+1.7删除HTML标签<br>
+1.8HTML 更换文本的颜色<br>
+1.9使用CSS选择器定义标签<br>
+1.10使用一个CSS Class去给标签定义Style</p>
+<style>
+.red-text{
+color: red;
+}
+</style>
+<p>1.11HTML 为多个元素使用CSS类定义样式</p>
+<style>
+.red-text {
+color: red;
+}
+</style>
+<p><p2 class="red-text">html编程入门教程</p2></p>
+<p class="red-text">在大家心目中，也许编程是一件非常困难的事情，其实也是一件非常有乐趣的事情，只要掌握好编程入门的方法，就能慢慢进入一个全新的创造世界。</p>
+<p>1.12HTML HTML 设置标签的字体大小</p>
+<style>
+  .red-text {
+    color: red;
+  }
+  p{
+  font-size:16px;
+  }
+</style>
+<p>1.13HTML 设置标签的字体样式<br>
+1.14引入Google字体</p>
+<style>
+.red-text {
+color: red;
+font-family:Lobster;
+}
+p {
+font-size: 16px;
+font-family: Monospace;
+}
+</style>
+<p>1.15HTML 处理多个字体降级<br>
+1.16HTML 给页面添加图片<br>
+1.17HTML 调整网页里图片大小<br>
+1.18HTML 给标签增加边框<br>
+1.19HTML 给标签增加圆角边框<br>
+1.20HTML 给图像设置圆角边框<br>
+1.21HTML 设置链接锚元素外部页面<br>
+1.22HTML 在p标签内设置锚链接<br>
+1.23HTML 使用#符合设置固定链接</p>
+<p>Click here for <a href="#">cat photos</a>.</p>
+<p>1.24HTML 为图片设置超链接<br>
+1.25HTML 为图片添加alt描述</p>
+<p>1.26HTML 创建项目符号无序列表<br>
+1.27HTML 创建有序列表<br>
+1.28HTML 创建文本输入框<br>
+1.29HTML 为文本输入框设定预定值<br>
+1.30HTML 添加表单<br>
+1.31HTML 为表单添加提交按钮<br>
+1.32HTML 使用HTML5技术把表单设置为必填<br>
+1.33HTML 添加单选框<br>
+1.34HTML 添加复选框<br>
+1.35HTML 使用checked属性设置复选框和单选框默认被选中</p>
+<p><label><input type="radio" name="indoor-outdoor" checked> Indoor</label><br>
+<label><input type="radio" name="indoor-outdoor"> Outdoor</label></p>
+<p>1.36HTML 在div元素中嵌套多个元素<br>
+1.37HTML 为div元素设置背景颜色<br>
+1.38HTML 为标签添加ID属性<br>
+1.39HTML 使用ID属性设置标签样式<br>
+1.40HTML 使用padding布局页面标签<br>
+1.41HTML 使用margin布局页面标签<br>
+1.42 HTML 使用负值设置页面元素的margin属性<br>
+1.43 HTML 为不同方向padding设置不同的值<br>
+1.44 HTML 为不同方向margin设置不同的值<br>
+1.45 HTML CSS中padding简写<br>
+1.46 HTML CSS中margin简写<br>
+1.47 CSS 样式的继承<br>
+1.48 CSS 继承Body元素样式<br>
+1.49 CSS 样式的覆盖<br>
+1.50 CSS 多个class处理样式覆盖<br>
+1.51 CSS 通过ID的样式属性覆盖class类的声明<br>
+1.52 CSS 通过内联样式覆盖class类的声明<br>
+1.53 CSS 通过使用Important覆盖所有其他样式<br>
+1.54 CSS 通过使用十六进制代码设置特定的颜色<br>
+1.55 CSS 十六进制白色表达方式<br>
+1.56 CSS 十六进制RGB红色表达方式<br>
+1.56 CSS 十六进制RGB绿色表达方式<br>
+1.56 CSS 十六进制RGB蓝色表达方式<br>
+1.57 CSS 十六进制RGB混合颜色<br>
+1.58 CSS 灰色度设置<br>
+1.59 CSS 不同等级的灰度设置<br>
+1.60 CSS 十六进制RGB表达式缩写<br>
+1.61 CSS 使用rgb属性设定颜色<br>
+1.62 CSS 使用rgb属性设定白色<br>
+1.63 CSS 使用rgb属性设定红色<br>
+1.64 CSS 使用rgb属性设定绿色<br>
+1.65 CSS 使用rgb属性设定蓝色<br>
+1.66 CSS 使用rgb属性设定混合颜色</p>
+<h3 class="mume-header" id="2&#x5728;w3cshool&#x590D;&#x4E60;javascript&#x7684;&#x77E5;&#x8BC6;&#x91CD;&#x70B9;">2.在w3cshool复习JavaScript的知识（重点）</h3>
+
+<p>2.1理解JavaScript未定义变量</p>
+<pre class="language-text">var a=5;
+var b=10;
+var c=&quot;I am a&quot;;
+
+a = a + 1;
+b = b + 5;
+c = c + &quot; String!&quot;;
+</pre>
+<p>2.2理解JavaScript变量的大小写敏感性</p>
+<pre class="language-text">&#x4F7F;&#x7528; &#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5; &#x6765;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A; Javascript &#x53D8;&#x91CF;&#xFF0C;&#x5728; &#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5; &#x4E2D;&#xFF0C;&#x53D8;&#x91CF;&#x540D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x9996;&#x5199;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5355;&#x8BCD;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x5747;&#x4E3A;&#x5927;&#x5199;&#x3002;
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+studlyCapVar = 10;
+properCamelCase = &quot;A String&quot;;
+titleCaseOver = 9000;
+2.3JavaScript &#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5F15;&#x53F7;
+&#x5F53;&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x4EE5;&#x5355;&#x5F15;&#x53F7;&#x6216;&#x53CC;&#x5F15;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x548C;&#x7ED3;&#x5C3E;&#x3002;&#x90A3;&#x4E48;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;: &quot; &#x6216;&#x8005; &apos; &#x65F6;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#x5462;?
+&#x5728; JavaScript &#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x5F15;&#x53F7;&#x524D;&#x9762;&#x4F7F;&#x7528; &#x53CD;&#x659C;&#x6760; (\) &#x6765;&#x8F6C;&#x4E49;&#x5F15;&#x53F7;&#x3002;
+var sampleStr = &quot;Alan said, \&quot;Peter is learning JavaScript\&quot;.&quot;;
+</pre>
+<p>2.4JavaScript 队列</p>
+<pre class="language-text">&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x4E2D; &#x961F;&#x5217;&#xFF08;queue&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6761;&#x76EE;&#x90FD;&#x662F;&#x6709;&#x79E9;&#x5E8F;&#x7684;&#x3002;&#x65B0;&#x7684;&#x6761;&#x76EE;&#x4F1A;&#x88AB;&#x52A0;&#x5230; &#x961F;&#x5217; &#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x65E7;&#x7684;&#x6761;&#x76EE;&#x4F1A;&#x4ECE; &#x961F;&#x5217; &#x7684;&#x5934;&#x90E8;&#x88AB;&#x79FB;&#x51FA;&#x3002;
+&#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570; queue &#xFF0C;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;arr&#x548C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;item&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x6570;&#x5B57;item&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x7ED3;&#x5C3E;&#xFF0C;&#x7136;&#x540E;&#x79FB;&#x51FA;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6700;&#x540E;&#x961F;&#x5217;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x3002;
+function queue(arr, item) {
+// Your code here
+        arr.push(item);
+        item=arr.shift();
+return item;// Change this line
+}
+// Test Setup
+var testArr = [5,6,7,8,9];
+// Display Code
+console.log(&quot;Before: &quot; + JSON.stringify(testArr));
+console.log(queue(testArr, 10)); // Modify this line to test
+console.log(&quot;After: &quot; + JSON.stringify(testArr));
+</pre>
+<p>2.5JavaScript 使用中括号索引查找字符串中的第N个字符</p>
+<pre class="language-text">&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; [&#x7D22;&#x5F15;]&#x6765;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;
+&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x662F;&#x4ECE; 0 &#x5F00;&#x59CB;&#x8BA1;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x7D22;&#x5F15;&#x5B9E;&#x9645;&#x4E0A;&#x662F;[0]&#x3002;
+var firstName = &quot;Ada&quot;;
+var secondLetterOfFirstName = firstName[1];
+
+// Setup
+var lastName = &quot;Lovelace&quot;;
+// Only change code below this line.
+var thirdLetterOfLastName = lastName[2];
+</pre>
+<p>2.6Javascript 字符串操作综合训练</p>
+<pre class="language-text">&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5C06;&#x7ED3;&#x5408;&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x6765;&#x73A9;&#x4E00;&#x4E2A;&#x586B;&#x5B57;&#x98CE;&#x683C;&#x7684;&#x6587;&#x5B57;&#x6E38;&#x620F;&#x3002;
+&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x63D0;&#x4F9B;&#x7684;&#x53D8;&#x91CF;&#xFF1A;&#x540D;&#x8BCD;myNoun&#x3001;&#x5F62;&#x5BB9;&#x8BCD;myAdjective&#x3001;&#x52A8;&#x8BCD;myVerb&#x3001;&#x526F;&#x8BCD;myAdverb&#xFF0C;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5E76;&#x8D4B;&#x503C;&#x5230; result&#x3002;
+&#x6B64;&#x5916;&#xFF0C;&#x9664;&#x4E86;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8BCD;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+var result = &quot;&quot;;
+// Your code below this line
+result=myNoun+&apos;,&apos;+myAdjective+&apos;,&apos;+myVerb+&apos;,&apos;+myAdverb;
+// Your code above this line
+return result;
+}
+// Change the words here to test your function
+wordBlanks(&quot;cat&quot;, &quot;little&quot;, &quot;hit&quot;, &quot;slowly&quot;);
+</pre>
+<p>2.7JavaScript push()函数追加数组数据</p>
+<pre class="language-text">&#x5C06;&#x6570;&#x636E;&#x8FFD;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x672B;&#x5C3E;&#x7684;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7; push() &#x51FD;&#x6570;
+var ourArray = [&quot;Stimpson&quot;, &quot;J&quot;, &quot;cat&quot;];
+ourArray.push([&quot;happy&quot;, &quot;joy&quot;]); 
+ourArray now equals [&quot;Stimpson&quot;, &quot;J&quot;, &quot;cat&quot;, [&quot;happy&quot;, &quot;joy&quot;]]
+Setup
+
+var myArray = [[&quot;John&quot;, 23], [&quot;cat&quot;, 2]];
+myArray.push([&quot;dog&quot;,3]);
+</pre>
+<p>2.8JavaScript pop()函数弹出数组最后数据</p>
+<pre class="language-text">.pop() &#x51FD;&#x6570;&#x7528;&#x6765;&#x201C;&#x629B;&#x51FA;&#x201D;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x672B;&#x5C3E;&#x7684;&#x503C;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x201C;&#x629B;&#x51FA;&#x201D;&#x7684;&#x503C;&#x8D4B;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x3002;
+&#x6570;&#x7EC4;&#x4E2D;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6761;&#x76EE;&#xFF08;&#x6570;&#x503C;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x6570;&#x7EC4;&#xFF09;&#x53EF;&#x4EE5;&#x88AB;&#x201C;&#x629B;&#x51FA;&#x6765;&#x201D; &#x3002;
+
+&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;, &#x5BF9;&#x4E8E;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;
+var oneDown = [1, 4, 6].pop();
+&#x73B0;&#x5728; oneDown &#x7684;&#x503C;&#x4E3A; 6 &#xFF0C;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x4E86; [1, 4]
+</pre>
+<p>2.9JavaScript shift()函数移出数组第一个数据</p>
+<pre class="language-text">.shift() &#x5C31;&#x662F;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x7C7B;&#x578B;&#x9700;&#x6C42;&#x7684;&#x3002;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x7C7B;&#x4F3C; .pop()&#xFF0C;&#x4F46;&#x5B83;&#x79FB;&#x9664;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3002;
+var ourArray = [&quot;Stimpson&quot;, &quot;J&quot;, [&quot;cat&quot;]];
+removedFromOurArray = ourArray.shift();
+var myArray = [[&quot;John&quot;, 23], [&quot;dog&quot;, 3]];
+var removedFromMyArray=myArray.shift();
+&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;myArray = [[&quot;dog&quot;,3]] &amp; removedFromMyArray = [&quot;John&quot;,23]
+</pre>
+<p>2.10JavaScript JSON操作</p>
+<pre class="language-text">JavaScript Object Notation &#x7B80;&#x79F0; JSON&#xFF0C;&#x5B83;&#x4F7F;&#x7528;JavaScript&#x5BF9;&#x8C61;&#x7684;&#x683C;&#x5F0F;&#x6765;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;JSON&#x662F;&#x7075;&#x6D3B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5141;&#x8BB8; &#x6570;&#x636E;&#x7ED3;&#x6784; &#x662F; &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6570;&#x5B57;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x548C; &#x5BF9;&#x8C61; &#x7684;&#x4EFB;&#x610F;&#x7EC4;&#x5408;&#x3002;
+&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;JSON&#x5BF9;&#x8C61;&#x7684;&#x793A;&#x4F8B;&#xFF1A;
+var ourMusic = [
+{
+&quot;artist&quot;: &quot;Daft Punk&quot;,
+&quot;title&quot;: &quot;Homework&quot;,
+&quot;release_year&quot;: 1997,
+&quot;formats&quot;: [ 
+&quot;CD&quot;, 
+&quot;Cassette&quot;, 
+&quot;LP&quot; ],
+&quot;gold&quot;: true
+}
+];
+&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x8C61;&#x6709;&#x5404;&#x79CD;&#x5173;&#x4E8E;&#x4E13;&#x8F91;&#x7684; &#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x5B83;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x5D4C;&#x5957;&#x7684; formarts &#x7684;&#x6570;&#x7EC4;&#x3002;&#x9644;&#x52A0;&#x4E13;&#x8F91;&#x8BB0;&#x5F55;&#x53EF;&#x4EE5;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x4E0A;&#x5C42;&#x3002;
+&#x63D0;&#x793A;
+&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x591A;&#x4E2A; JSON &#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x8C61;&#x4E0E;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x8981;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x3002;
+</pre>
+<p>2.11JavaScript 获取JSON属性值</p>
+<pre class="language-text">&#x901A;&#x8FC7;&#x4E32;&#x8054;&#x8D77;&#x6765;&#x7684;&#x70B9;&#x64CD;&#x4F5C;&#x7B26;&#x6216;&#x4E2D;&#x62EC;&#x53F7;&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x8BBF;&#x95EE;JSON&#x5BF9;&#x8C61;&#x7684;&#x5D4C;&#x5957;&#x5C5E;&#x6027;&#x3002;
+&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5D4C;&#x5957;&#x7684;JSON&#x5BF9;&#x8C61;&#xFF1A;
+var ourStorage = {
+&quot;desk&quot;: {
+&quot;drawer&quot;: &quot;stapler&quot;
+},
+&quot;cabinet&quot;: {
+&quot;top drawer&quot;: { 
+&quot;folder1&quot;: &quot;a file&quot;,
+&quot;folder2&quot;: &quot;secrets&quot;
+},
+&quot;bottom drawer&quot;: &quot;soda&quot;
+}
+}
+ourStorage.cabinet[&quot;top drawer&quot;].folder2;// &quot;secrets&quot;
+ourStorage.desk.drawer; // &quot;stapler&quot;
+</pre>
+<p>2.12JavaScript 获取JSON数组值</p>
+<pre class="language-text">&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5728;&#x524D;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6240;&#x89C1;&#xFF0C;JSON&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x3002;&#x4E0E;&#x8BBF;&#x95EE;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#xFF0C;&#x7528;&#x4E2D;&#x62EC;&#x53F7;&#x64CD;&#x4F5C;&#x7B26;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x3002;
+&#x4E0B;&#x9762;&#x662F;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;
+var ourPets = { 
+&quot;cats&quot;: [
+&quot;Meowzer&quot;,
+&quot;Fluffy&quot;,
+&quot;Kit-Cat&quot;
+],
+&quot;dogs&quot;: [
+&quot;Spot&quot;,
+&quot;Bowser&quot;,
+&quot;Frankie&quot;
+]
+};
+ourPets.cats[1]; // &quot;Fluffy&quot;
+ourPets.dogs[0]; // &quot;Spot&quot;
+</pre>
+<p>2.13JavaScript 使用random()生成随机小数</p>
+<pre class="language-text">&#x968F;&#x673A;&#x6570;&#x5BF9;&#x4E8E;&#x521B;&#x5EFA;&#x968F;&#x673A;&#x884C;&#x4E3A;&#x5F88;&#x6709;&#x7528;,&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x884C;&#x4E3A;&#x53EA;&#x6709;&#x4E24;&#x79CD;&#xFF1A;&#x786E;&#x5B9A;&#x6027;&#x548C;&#x968F;&#x673A;&#x6027;&#x3002;
+&#x800C;&#x968F;&#x673A;&#x6570;&#x6700;&#x9002;&#x5408;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x8FD9;&#x79CD;&#x968F;&#x673A;&#x884C;&#x4E3A;&#x3002;
+Math.random()&#x7528;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5728;0(&#x5305;&#x62EC;0)&#x5230;1(&#x4E0D;&#x5305;&#x62EC;1)&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x5C0F;&#x6570;&#xFF0C;&#x56E0;&#x6B64;Math.random()&#x53EF;&#x80FD;&#x8FD4;&#x56DE;0&#x4F46;&#x7EDD;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;1&#x3002;
+</pre>
+<p>2.14JavaScript 使用random()生成随机数</p>
+<pre class="language-text">&#x7528; Math.random() &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x5C0F;&#x6570;&#x3002;
+&#x628A;&#x8FD9;&#x4E2A;&#x968F;&#x673A;&#x5C0F;&#x6570;&#x4E58;&#x4EE5; 20&#x3002;
+&#x7528; Math.floor() &#x5411;&#x4E0B;&#x53D6;&#x6574; &#x83B7;&#x5F97;&#x5B83;&#x6700;&#x8FD1;&#x7684;&#x6574;&#x6570;&#x3002;
+&#x8BB0;&#x4F4F; Math.random() &#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE; 1&#x3002;&#x540C;&#x65F6;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x662F;&#x5728;&#x7528; Math.floor() &#x5411;&#x4E0B;&#x53D6;&#x6574;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x6211;&#x4EEC;&#x83B7;&#x5F97;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x53EF;&#x80FD;&#x6709; 20&#x3002;&#x8FD9;&#x786E;&#x4FDD;&#x4E86;&#x6211;&#x4EEC;&#x83B7;&#x5F97;&#x4E86;&#x4E00;&#x4E2A;&#x5728;0&#x5230;19&#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#x3002;
+
+&#x628A;&#x64CD;&#x4F5C;&#x8FDE;&#x7F00;&#x8D77;&#x6765;&#xFF0C;&#x4EE3;&#x7801;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#xFF1A;
+Math.floor(Math.random() * 20);
+&#x6211;&#x4EEC;&#x5148;&#x8C03;&#x7528; Math.random()&#xFF0C;&#x628A;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#x4E58;&#x4EE5;20&#xFF0C;&#x7136;&#x540E;&#x628A;&#x4E0A;&#x4E00;&#x6B65;&#x7684;&#x7ED3;&#x679C;&#x4F20;&#x7ED9; Math.floor()&#xFF0C;&#x6700;&#x7EC8;&#x901A;&#x8FC7;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x83B7;&#x5F97;&#x6700;&#x8FD1;&#x7684;&#x6574;&#x6570;&#x3002;
+</pre>
+<p>2.15JavaScript 使用random()在一个范围内生成随机数</p>
+<pre class="language-text">&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;&#x662F;&#x5728;0&#x5230;&#x67D0;&#x4E2A;&#x6570;&#x4E4B;&#x95F4;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x843D;&#x5728;&#x4E24;&#x4E2A;&#x7279;&#x5B9A;&#x6570;&#x5B57;&#x8303;&#x56F4;&#x5185;&#x7684;&#x968F;&#x673A;&#x6570;&#x95F4;&#x3002;
+&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x503C;&#x3002;
+&#x4E0B;&#x9762;&#x662F;&#x6211;&#x4EEC;&#x5C06;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4ED4;&#x7EC6;&#x770B;&#x770B;&#x5E76;&#x5C1D;&#x8BD5;&#x7406;&#x89E3;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x6B63;&#x5728;&#x5E72;&#x4EC0;&#x4E48;&#xFF1A;
+Math.floor(Math.random() * (max - min + 1)) + min
+&#x4F8B;&#x5B50;
+function ourFunction(ourMin, ourMax) {
+return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+ourFunction(1, 9);
+function randomRange(myMin, myMax) {    
+var randomRange=Math.floor(Math.random()*(myMax-myMin+1))+myMin;
+return randomRange; // Change this line
+}
+var myRandom = randomRange(5, 15);
+</pre>
+<p>2.16JavaScript 使用正则表达式操作字符串</p>
+<pre class="language-text">Regular expressions &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x88AB;&#x7528;&#x6765;&#x6839;&#x636E;&#x67D0;&#x79CD;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x6765;&#x5BFB;&#x627E;strings&#x4E2D;&#x7684;&#x67D0;&#x4E9B;&#x5355;&#x8BCD;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x627E;&#x5230;&#x5B57;&#x7B26;&#x4E32;The dog chased the cat&#x4E2D;&#x5355;&#x8BCD; the&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;: /the/gi
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5206;&#x6210;&#x51E0;&#x6BB5;&#xFF1A;
+/ &#x662F;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5934;&#x90E8;
+the &#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5339;&#x914D;&#x7684;&#x6A21;&#x5F0F;
+/ &#x662F;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5C3E;&#x90E8;
+g &#x4EE3;&#x8868;&#x7740; global(&#x5168;&#x5C40;)&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x3002;
+i &#x4EE3;&#x8868;&#x7740;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x610F;&#x601D;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x5BFB;&#x627E;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65F6;&#x5019;&#x5FFD;&#x7565;&#x6389;&#x5B57;&#x6BCD;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x3002;
+</pre>
+<p>2.17JavaScript 使用正则表达式选取空白字符</p>
+<pre class="language-text">&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x9009;&#x62E9;&#x5668; \s &#x6765;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7A7A;&#x767D;&#x3002;
+&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x6709; &quot; &quot; (&#x7A7A;&#x683C;&#x7B26;)&#x3001;\r (&#x56DE;&#x8F66;&#x7B26;)&#x3001;\n (&#x6362;&#x884C;&#x7B26;)&#x3001;\t (&#x5236;&#x8868;&#x7B26;) &#x548C; \f (&#x6362;&#x9875;&#x7B26;)&#x3002;
+&#x7A7A;&#x767D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x4F3C;&#x4E8E;&#xFF1A;
+/\s+/g
+</pre>
+<p>2.18JavaScript 使用正则表达式反转匹配</p>
+<pre class="language-text">&#x53EF;&#x4EE5;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5927;&#x5199;&#x7248;&#x672C;&#x6765;&#x53CD;&#x8F6C;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#xFF08;&#x76F8;&#x53CD;&#x610F;&#x601D;&#xFF09;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;\s &#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;\S &#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x3002;
+</pre>
+<h2 class="mume-header" id="&#x5B66;&#x4E60;&#x7247;">学习片</h2>
+
+<h3 class="mume-header" id="1&#x5728;w3cshool&#x4E2D;&#x5B66;&#x4E60;&#x590D;&#x4E60;bootstrap&#x7684;&#x77E5;&#x8BC6;">1.在w3cshool中学习复习Bootstrap的知识</h3>
+
+<p>1.1使用Bootstrap设计响应式页面</p>
+<pre class="language-text">Bootstrap&#x4F1A;&#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x4F7F;&#x7528;&#x8005;&#x5C4F;&#x5E55;&#x7684;&#x5927;&#x5C0F;,&#x5E76;&#x6839;&#x636E;&#x5C4F;&#x5E55;&#x7684;&#x5927;&#x5C0F;&#x81EA;&#x52A8;&#x8C03;&#x6574;HTML&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x6765;&#x9002;&#x914D;&#x5C4F;&#x5E55;,&#x56E0;&#x6B64;&#x79F0;&#x4E4B;&#x4E3A;--&#x54CD;&#x5E94;&#x5F0F;&#x5E03;&#x5C40;&#x3002;
+&#x901A;&#x8FC7;&#x54CD;&#x5E94;&#x5F0F;&#x5E03;&#x5C40;,&#x4F60;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x4E3A;&#x4F60;&#x7684;Web&#x7AD9;&#x70B9;&#x91CD;&#x65B0;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x624B;&#x673A;&#x7248;&#x7684;&#x9875;&#x9762;,Bootstrap&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x8C03;&#x6574;&#x597D;&#x5728;&#x624B;&#x673A;&#x9875;&#x4E0A;&#x7684;&#x9875;&#x9762;&#x663E;&#x793A;,&#x4E8B;&#x5B9E;&#x4E0A;,Bootstrap&#x5728;&#x4EFB;&#x4F55;&#x5BBD;&#x5EA6;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#x90FD;&#x80FD;&#x9002;&#x5E94;&#x5F97;&#x5F88;&#x597D;&#x3002;
+&#x4F7F;&#x7528;Bootstrap&#x4E5F;&#x975E;&#x5E38;&#x7B80;&#x5355;,&#x4F60;&#x53EA;&#x9700;&#x8981;&#x628A;&#x4E0B;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;Bootstrap&#x6765;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x7684;&#x5E94;&#x7528;&#x7684;&#x5934;&#x90E8;&#xFF1A;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//maxcdn.bootstrapcdn.com/bootstrap /3.3.1/css/bootstrap.min.css&quot;/&gt;
+</pre>
+<p>1.2通过Bootstrap使图片适配手机显示</p>
+<pre class="language-text">&#x901A;&#x8FC7;Bootstrap&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x7ED9;&#x56FE;&#x7247;&#x6DFB;&#x52A0; img-responsive &#x7684;class&#x5C5E;&#x6027;,&#x56FE;&#x7247;&#x7684;&#x5BBD;&#x5EA6;&#x5C31;&#x80FD;&#x81EA;&#x52A8;&#x9002;&#x914D;&#x4F60;&#x624B;&#x673A;&#x5C4F;&#x5E55;&#x7684;&#x5BBD;&#x5EA6;&#x3002;
+</pre>
+<p>1.3通过Bootstrap使文本居中</p>
+<pre class="language-text">Bootstrap&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x4F7F;&#x56FE;&#x7247;&#x81EA;&#x9002;&#x5E94;&#x4EE5;&#x5916;,&#x8FD8;&#x53EF;&#x4EE5;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x8BA9;&#x5934;&#x90E8;&#x6807;&#x9898;&#x7684;&#x6587;&#x5B57;&#x5C45;&#x4E2D;,&#x4F7F;&#x6807;&#x9898;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x7F8E;&#x89C2;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x7ED9;h2&#x6807;&#x7B7E;&#x6DFB;&#x52A0;text-center&#x7684;class&#x5C5E;&#x6027;,&#x6807;&#x9898;&#x6587;&#x5B57;&#x5C31;&#x53EF;&#x4EE5;&#x5C45;&#x4E2D;&#x4E86;&#x3002;
+&#x63D0;&#x9192;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x7ED9;&#x6807;&#x7B7E;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;class,&#x5C31;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;
+&lt;h8 class=&quot;red-text text-center&quot;&gt;your text&lt;/h8&gt;
+</pre>
+<p>1.4为所有按钮添加Font Awesome图标</p>
+<pre class="language-text">Font Awesome&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x7684;&#x56FE;&#x6807;&#x5E93;&#x3002; &#x8FD9;&#x4E9B;&#x56FE;&#x6807;&#x90FD;&#x662F;&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#xFF0C;&#x4EE5;.svg&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#x3002; &#x8FD9;&#x4E9B;&#x56FE;&#x6807;&#x53EF;&#x4EE5;&#x50CF;&#x5B57;&#x4F53;&#x4E00;&#x6837;&#x88AB;&#x5904;&#x7406;,&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x50CF;&#x7D20;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x4E00;&#x6837;&#x6307;&#x5B9A;&#x8FD9;&#x4E9B;&#x56FE;&#x6807;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E9B;&#x56FE;&#x6807;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x7236;&#x7C7B;HTML&#x6807;&#x7B7E;&#x7684;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x3002; 
+</pre>
+<h3 class="mume-header" id="2&#x5728;w3cshool&#x4E2D;&#x5B66;&#x4E60;&#x590D;&#x4E60;jquery&#x7684;&#x77E5;&#x8BC6;">2.在w3cshool中学习复习jQuery的知识</h3>
+
+<p>2.1开始学习jQuery和准备工作</p>
+<pre class="language-text">&#x5728;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x4F7F;&#x7528;jQuery&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5728;HTML&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x3002;
+&#x9996;&#x5148;&#xFF0C;&#x5728;&#x9875;&#x9762;&#x9876;&#x90E8;&#x6DFB;&#x52A0;&#x4E00;&#x884C;script&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0B;&#x4E00;&#x884C;&#x5199;&#x4E0A;&#x7ED3;&#x675F;&#x7B26;&#x3002;
+&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x8FD0;&#x884C;script&#x91CC;&#x6240;&#x6709;&#x7684;Javascript&#xFF0C;&#x5305;&#x62EC;jQuery&#x3002;
+&#x5728;&#x4F60;&#x7684;script&#x5143;&#x7D20;&#x91CC;&#xFF0C;&#x6DFB;&#x52A0;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;$(document).ready(function() {&#x5230;&#x4F60;&#x7684;script&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0B;&#x4E00;&#x884C;&#x7528;});&#x7ED3;&#x675F;&#x5B83;&#x3002;
+&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5199;function&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;function&#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#x540E;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#x3002;
+&#x8FD9;&#x5F88;&#x5173;&#x952E;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x6CA1;&#x6709;document ready function&#x4EE5;&#x524D;&#xFF0C;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x80FD;&#x4F1A;&#x5728;HTML&#x6E32;&#x67D3;&#x5B8C;&#x6210;&#x4E4B;&#x524D;&#x5C31;&#x6267;&#x884C;&#x4E86;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x4EA7;&#x751F;bug&#x3002;
+</pre>
+<p>2.2jQuery使用选择器获取HTML元素</p>
+<pre class="language-text">&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x4E86;document ready function&#x3002;
+&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;jQuery&#x8BED;&#x53E5;&#xFF0C;&#x6240;&#x6709;jQuery&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x4EE5;$&#x5F00;&#x5934;&#xFF0C;&#x901A;&#x5E38;&#x79F0;&#x4E3A; &#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF0C;&#x6216;&#x8005;&#x7B80;&#x79F0;&#x4E3A;bling&#x3002;
+jQuery&#x901A;&#x8FC7;&#x9009;&#x62E9;&#x5668;&#x6765;&#x9009;&#x62E9;&#x4E00;&#x4E2A;HTML&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x5143;&#x7D20;&#x505A;&#x4E9B;&#x6539;&#x53D8;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x8BA9;&#x6240;&#x6709;&#x7684;button&#x5143;&#x7D20;&#x6709;&#x5F39;&#x56DE;&#x6548;&#x679C;&#xFF0C;&#x53EA;&#x8981;&#x628A;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5199;&#x5728;document ready function&#x91CC;&#x9762;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;
+$(&quot;button&quot;).addClass(&quot;animated bounce&quot;);
+&#x6CE8;&#x610F;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5728;&#x540E;&#x53F0;&#x4E3A;&#x4F60;&#x5F15;&#x5165;&#x4E86;jQuery&#x5E93;&#x548C;Animate.css&#x5E93;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8F91;&#x5668;&#x91CC;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x5E93;&#xFF0C;&#x4ECE;&#x800C;&#x901A;&#x8FC7;jQuery&#x7ED9;button&#x5143;&#x7D20;&#x6DFB;&#x52A0;Animate.css&#x7684;bounce&#x56DE;&#x5F39;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;
+</pre>
+<p>2.3使用jQuery删除HTML元素的class</p>
+<pre class="language-text">&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;jQuery&#x7684;addClass()&#x65B9;&#x6CD5;&#x7ED9;&#x5143;&#x7D20;&#x6DFB;&#x52A0;class&#xFF0C;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;jQuery&#x7684;removeClass()&#x65B9;&#x6CD5;&#x5220;&#x9664;&#x5143;&#x7D20;&#x7684;class&#x3002;
+&#x4F8B;&#x5B50;&#xFF1A;
+&lt;button class=&quot;btn btn-default target&quot; id=&quot;target4&quot;&gt;#target4&lt;/button&gt;
+&#x4EE5;&#x4E0B;&#x662F;&#x5BF9;button&#x5143;&#x7D20;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF1A;
+$(&quot;#target2&quot;).removeClass(&quot;btn-default&quot;);
+</pre>
+<p>2.4使用jQuery删除一个HTML元素</p>
+<pre class="language-text">jQuery &#x6709;&#x4E00;&#x4E2A;.remove()&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5F7B;&#x5E95;&#x5220;&#x9664;&#x4E00;&#x4E2A;HTML&#x5143;&#x7D20;&#x3002;
+&#x4F7F;&#x7528;.remove()&#x65B9;&#x6CD5;&#x6765;&#x5220;&#x9664;&#x9875;&#x9762;&#x4E2D;&#x7684;target4&#x5143;&#x7D20;&#x3002;
+$(&quot;#target4&quot;).remove();
+</pre>
+<p>2.5jQuery使用appendTo()移动HTML元素</p>
+<pre class="language-text">jQuery&#x6709;&#x4E00;&#x4E2A;appendTo()&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x628A;&#x9009;&#x4E2D;&#x7684;HTML&#x5143;&#x7D20;&#x9644;&#x52A0;&#x5230;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4E2D;&#x3002;
+
+&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8BA9;target4&#x4ECE;right-well&#x79FB;&#x52A8;&#x5230;left-well&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;
+$(&quot;#target4&quot;).appendTo(&quot;#left-well&quot;);
+</pre>
+<p>2.6jQuery使用clone()方法复制元素</p>
+<pre class="language-text">jQuery&#x6709;&#x4E00;&#x4E2A;clone()&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x590D;&#x5236;&#x5143;&#x7D20;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x628A;target2&#x4ECE;left-well&#x590D;&#x5236;&#x5230;right-well&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;
+$(&quot;#target2&quot;).clone().appendTo(&quot;#right-well&quot;);
+</pre>
+<p>2.7jQuery使用parent()操作父级元素</p>
+<pre class="language-text">&#x6BCF;&#x4E2A;HTML&#x5143;&#x7D20;&#x90FD;&#x6709;&#x4E00;&#x4E2A;parent&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4ECE;&#x4E2D;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x7684;jQuery Playground&#x4E2D;&#x7684;h3&#x5143;&#x7D20;&#x7684;&#x7236;&#x5143;&#x7D20;&#x662F;&lt;div class=&quot;container-fluid&quot;&gt;&#xFF0C;&lt;div class=&quot;container-fluid&quot;&gt;&#x7684;&#x7236;&#x5143;&#x7D20;&#x662F;body&#x3002;
+jQuery&#x6709;&#x4E00;&#x4E2A;parent()&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x4F60;&#x8BBF;&#x95EE;&#x9009;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x7236;&#x5143;&#x7D20;&#x3002;
+&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x663E;&#x793A;&#x5982;&#x4F55;&#x4F7F;&#x7528;parent()&#x8BBE;&#x5B9A;left-well&#x5143;&#x7D20;&#x7684;&#x7236;&#x5143;&#x7D20;&#x7684;&#x80CC;&#x666F;&#x8272;&#x4E3A;&#x84DD;&#x8272;&#xFF1A;
+$(&quot;#left-well&quot;).parent().css(&quot;background-color&quot;, &quot;blue&quot;)
+</pre>
+<p>2.8jQuery使用children()操作子级元素</p>
+<pre class="language-text">&#x8BB8;&#x591A;HTML&#x5143;&#x7D20;&#x90FD;&#x6709;children(&#x5B50;&#x5143;&#x7D20;)&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x4ECE;&#x7236;&#x5143;&#x7D20;&#x90A3;&#x91CC;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x6BCF;&#x4E2A;HTML&#x5143;&#x7D20;&#x90FD;&#x662F;body&#x7684;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x4F60;&#x7684;jQuery Playground&#x4E2D;&#x7684;h3&#x5143;&#x7D20;&#x662F;&lt;div class=&quot;container-fluid&quot;&gt;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x3002;
+jQuery&#x6709;&#x4E00;&#x4E2A;children()&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x8BBF;&#x95EE;&#x9009;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x3002;
+&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x663E;&#x793A;&#x5982;&#x4F55;&#x4F7F;&#x7528;children()&#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;left-well&#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x989C;&#x8272;&#x4E3A;&#x84DD;&#x8272;&#xFF1A;
+$(&quot;#left-well&quot;).children().css(&quot;color&quot;, &quot;blue&quot;)
+</pre>
+<p>2.9jQuery使用target:nth-child(n) CSS选择器获取子元素</p>
+<pre class="language-text">&#x4F60;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x4E86;&#x7528;jQuery&#x9009;&#x62E9;&#x5668;&#x901A;&#x8FC7;id&#x5C5E;&#x6027;&#x6765;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x4F46;&#x4F60;&#x4E0D;&#x53EF;&#x80FD;&#x603B;&#x662F;&#x5199;&#x8FD9;&#x4E48;&#x6574;&#x9F50;&#x7684;id&#x3002;
+&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;jQuery&#x6709;&#x4E00;&#x4E9B;&#x53E6;&#x5916;&#x7684;&#x6280;&#x5DE7;&#x6765;&#x83B7;&#x53D6;&#x6B63;&#x786E;&#x7684;&#x5143;&#x7D20;&#x3002;
+jQuery&#x7528;CSS&#x9009;&#x62E9;&#x5668;&#x6765;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#xFF0C;target:nth-child(n)CSS&#x9009;&#x62E9;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x901A;&#x8FC7;&#x76EE;&#x6807;&#x7C7B;&#x6216;&#x5143;&#x7D20;&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;
+&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x663E;&#x793A;&#x5982;&#x4F55;&#x7ED9;jQuery Playground&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x4E95;&#x4E2D;&#xFF08;left well&#x548C;right well&#xFF09;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x5B50;&#x5143;&#x7D20;&#x6DFB;&#x52A0;bounce&#x7C7B;&#xFF1A;
+$(&quot;.target:nth-child(3)&quot;).addClass(&quot;animated bounce&quot;);
+</pre>
+<h3 class="mume-header" id="3&#x5728;w3cshool&#x4E2D;&#x5B66;&#x4E60;&#x590D;&#x4E60;&#x521D;&#x7EA7;&#x811A;&#x672C;&#x7B97;&#x6CD5;&#x7684;&#x77E5;&#x8BC6;">3.在w3cshool中学习复习初级脚本算法的知识</h3>
+
+<p>.split()</p>
+<pre class="language-text">&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;
+.split() &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x628A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;
+
+&#x8BED;&#x6CD5;
+stringObject.split(separator,howmany)
+
+&#x53C2;&#x6570;      	&#x63CF;&#x8FF0;
+separator 	&#x5FC5;&#x9700;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4ECE;&#x8BE5;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x7684;&#x5730;&#x65B9;&#x5206;&#x5272; stringObject&#x3002;
+howmany 	&#x53EF;&#x9009;&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x5B50;&#x4E32;&#x4E0D;&#x4F1A;&#x591A;&#x4E8E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x4F1A;&#x88AB;&#x5206;&#x5272;&#xFF0C;&#x4E0D;&#x8003;&#x8651;&#x5B83;&#x7684;&#x957F;&#x5EA6;&#x3002;
+
+&#x8FD4;&#x56DE;&#x503C;
+&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;&#x8BE5;&#x6570;&#x7EC4;&#x662F;&#x901A;&#x8FC7;&#x5728; separator &#x6307;&#x5B9A;&#x7684;&#x8FB9;&#x754C;&#x5904;&#x5C06;&#x5B57;&#x7B26;&#x4E32; stringObject &#x5206;&#x5272;&#x6210;&#x5B50;&#x4E32;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5B57;&#x4E32;&#x4E0D;&#x5305;&#x62EC; separator &#x81EA;&#x8EAB;&#x3002;
+&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C; separator &#x662F;&#x5305;&#x542B;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x62EC;&#x4E0E;&#x8FD9;&#x4E9B;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x5B57;&#x4E32;&#xFF08;&#x4F46;&#x4E0D;&#x5305;&#x62EC;&#x4E0E;&#x6574;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#xFF09;&#x3002;
+&#x63D0;&#x793A;&#x548C;&#x6CE8;&#x91CA;
+
+&#x6CE8;&#x91CA;&#xFF1A;&#x5982;&#x679C;&#x628A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32; (&quot;&quot;) &#x7528;&#x4F5C; separator&#xFF0C;&#x90A3;&#x4E48; stringObject &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E4B;&#x95F4;&#x90FD;&#x4F1A;&#x88AB;&#x5206;&#x5272;&#x3002;
+&#x6CE8;&#x91CA;&#xFF1A;String.split() &#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x4E0E; Array.join &#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x76F8;&#x53CD;&#x7684;&#x3002;
+</pre>
+<p>.reverse()将数组反转</p>
+<p>定义和用法<br>
+reverse() 方法用于颠倒数组中元素的顺序。</p>
+<pre class="language-text">&#x8BED;&#x6CD5;
+arrayObject.reverse()
+
+&#x63D0;&#x793A;&#x548C;&#x6CE8;&#x91CA;
+&#x6CE8;&#x91CA;&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x3002;
+</pre>
+<p>.join(&quot;&quot;)</p>
+<pre class="language-text">&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;
+join() &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x628A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x653E;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+&#x5143;&#x7D20;&#x662F;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x8FDB;&#x884C;&#x5206;&#x9694;&#x7684;&#x3002;
+
+&#x8BED;&#x6CD5;
+arrayObject.join(separator)
+
+&#x53C2;&#x6570;      	&#x63CF;&#x8FF0;
+separator 	&#x53EF;&#x9009;&#x3002;&#x6307;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5206;&#x9694;&#x7B26;&#x3002;&#x5982;&#x679C;&#x7701;&#x7565;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#x3002;
+
+&#x8FD4;&#x56DE;&#x503C;
+&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x901A;&#x8FC7;&#x628A; arrayObject &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x5728;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x63D2;&#x5165; separator &#x5B57;&#x7B26;&#x4E32;&#x800C;&#x751F;&#x6210;&#x7684;&#x3002;
+</pre>
+<p>.replace() 方法<br>
+定义和用法<br>
+replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
+<pre class="language-text">&#x8BED;&#x6CD5;
+stringObject.replace(regexp/substr,replacement)
+
+&#x53C2;&#x6570; 	            &#x63CF;&#x8FF0;
+
+regexp/substr 	
+&#x5FC5;&#x9700;&#x3002;        &#x89C4;&#x5B9A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8981;&#x66FF;&#x6362;&#x7684;&#x6A21;&#x5F0F;&#x7684; RegExp &#x5BF9;&#x8C61;&#x3002;
+&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x5C06;&#x5B83;&#x4F5C;&#x4E3A;&#x8981;&#x68C0;&#x7D22;&#x7684;&#x76F4;&#x63A5;&#x91CF;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x9996;&#x5148;&#x88AB;&#x8F6C;&#x6362;&#x4E3A; RegExp &#x5BF9;&#x8C61;&#x3002;
+
+replacement 	&#x5FC5;&#x9700;&#x3002;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x3002;&#x89C4;&#x5B9A;&#x4E86;&#x66FF;&#x6362;&#x6587;&#x672C;&#x6216;&#x751F;&#x6210;&#x66FF;&#x6362;&#x6587;&#x672C;&#x7684;&#x51FD;&#x6570;&#x3002;
+
+&#x8FD4;&#x56DE;&#x503C;
+&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x662F;&#x7528; replacement &#x66FF;&#x6362;&#x4E86; regexp &#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x6216;&#x6240;&#x6709;&#x5339;&#x914D;&#x4E4B;&#x540E;&#x5F97;&#x5230;&#x7684;&#x3002;
+
+&#x8BF4;&#x660E;
+
+&#x5B57;&#x7B26;&#x4E32; stringObject &#x7684; replace() &#x65B9;&#x6CD5;&#x6267;&#x884C;&#x7684;&#x662F;&#x67E5;&#x627E;&#x5E76;&#x66FF;&#x6362;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5B83;&#x5C06;&#x5728; stringObject &#x4E2D;&#x67E5;&#x627E;&#x4E0E; regexp &#x76F8;&#x5339;&#x914D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x7528; replacement &#x6765;&#x66FF;&#x6362;&#x8FD9;&#x4E9B;&#x5B50;&#x4E32;&#x3002;&#x5982;&#x679C; regexp &#x5177;&#x6709;&#x5168;&#x5C40;&#x6807;&#x5FD7; g&#xFF0C;&#x90A3;&#x4E48; replace() &#x65B9;&#x6CD5;&#x5C06;&#x66FF;&#x6362;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x53EA;&#x66FF;&#x6362;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x5B50;&#x4E32;&#x3002;
+
+eplacement &#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#x3002;&#x5982;&#x679C;&#x5B83;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x4E2A;&#x5339;&#x914D;&#x90FD;&#x5C06;&#x7531;&#x5B57;&#x7B26;&#x4E32;&#x66FF;&#x6362;&#x3002;&#x4F46;&#x662F; replacement &#x4E2D;&#x7684; $ &#x5B57;&#x7B26;&#x5177;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x542B;&#x4E49;&#x3002;
+
+&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;&#xFF0C;&#x5B83;&#x8BF4;&#x660E;&#x4ECE;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x7528;&#x4E8E;&#x66FF;&#x6362;&#x3002;
+&#x5B57;&#x7B26; 	&#x66FF;&#x6362;&#x6587;&#x672C;
+$1&#x3001;$2&#x3001;...&#x3001;$99 	&#x4E0E; regexp &#x4E2D;&#x7684;&#x7B2C; 1 &#x5230;&#x7B2C; 99 &#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x76F8;&#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#x3002;
+$&amp; 	&#x4E0E; regexp &#x76F8;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x3002;
+$` 	&#x4F4D;&#x4E8E;&#x5339;&#x914D;&#x5B50;&#x4E32;&#x5DE6;&#x4FA7;&#x7684;&#x6587;&#x672C;&#x3002;
+$&apos; 	&#x4F4D;&#x4E8E;&#x5339;&#x914D;&#x5B50;&#x4E32;&#x53F3;&#x4FA7;&#x7684;&#x6587;&#x672C;&#x3002;
+$$ 	&#x76F4;&#x63A5;&#x91CF;&#x7B26;&#x53F7;&#x3002;
+
+&#x6CE8;&#x610F;&#xFF1A;ECMAScript v3 &#x89C4;&#x5B9A;&#xFF0C;replace() &#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570; replacement &#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#x800C;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5339;&#x914D;&#x90FD;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x4F5C;&#x4E3A;&#x66FF;&#x6362;&#x6587;&#x672C;&#x4F7F;&#x7528;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E0E;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EF;&#x4EE5;&#x6709; 0 &#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x53C2;&#x6570;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x58F0;&#x660E;&#x4E86;&#x5339;&#x914D;&#x5728; stringObject &#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; stringObject &#x672C;&#x8EAB;&#x3002;
+</pre>
+<p>toLowerCase() 方法</p>
+<pre class="language-text">&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;
+toLowerCase() &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#x3002;
+
+&#x8BED;&#x6CD5;
+stringObject.toLowerCase()
+
+&#x8FD4;&#x56DE;&#x503C;
+&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x5176;&#x4E2D; stringObject &#x7684;&#x6240;&#x6709;&#x5927;&#x5199;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E86;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x3002;
+</pre>
+<p>charAt() 方法</p>
+<pre class="language-text">&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;
+charAt() &#x65B9;&#x6CD5;&#x53EF;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;
+
+&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;JavaScript &#x5E76;&#x6CA1;&#x6709;&#x4E00;&#x79CD;&#x6709;&#x522B;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x957F;&#x5EA6;&#x4E3A; 1 &#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+
+&#x8BED;&#x6CD5;
+stringObject.charAt(index)
+
+&#x53C2;&#x6570; 	 &#x63CF;&#x8FF0;
+index 	&#x5FC5;&#x9700;&#x3002;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5373;&#x5B57;&#x7B26;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4E0B;&#x6807;&#x3002;
+&#x63D0;&#x793A;&#x548C;&#x6CE8;&#x91CA;
+
+&#x6CE8;&#x91CA;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x4E0B;&#x6807;&#x662F; 0&#x3002;&#x5982;&#x679C;&#x53C2;&#x6570; index &#x4E0D;&#x5728; 0 &#x4E0E; string.length &#x4E4B;&#x95F4;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+</pre>
+<p>.indexOf()</p>
+<pre class="language-text">&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;
+indexOf() &#x65B9;&#x6CD5;&#x53EF;&#x8FD4;&#x56DE;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x9996;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+
+&#x8BED;&#x6CD5;
+stringObject.indexOf(searchvalue,fromindex)
+
+&#x53C2;&#x6570;   	&#x63CF;&#x8FF0;
+searchvalue 	&#x5FC5;&#x9700;&#x3002;&#x89C4;&#x5B9A;&#x9700;&#x68C0;&#x7D22;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x3002;
+fromindex 	&#x53EF;&#x9009;&#x7684;&#x6574;&#x6570;&#x53C2;&#x6570;&#x3002;&#x89C4;&#x5B9A;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5F00;&#x59CB;&#x68C0;&#x7D22;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5B83;&#x7684;&#x5408;&#x6CD5;&#x53D6;&#x503C;&#x662F; 0 &#x5230; stringObject.length - 1&#x3002;&#x5982;&#x7701;&#x7565;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x5C06;&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9996;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x68C0;&#x7D22;&#x3002;
+
+&#x8BF4;&#x660E;
+&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x5730;&#x68C0;&#x7D22;&#x5B57;&#x7B26;&#x4E32; stringObject&#xFF0C;&#x770B;&#x5B83;&#x662F;&#x5426;&#x542B;&#x6709;&#x5B50;&#x4E32; searchvalue&#x3002;&#x5F00;&#x59CB;&#x68C0;&#x7D22;&#x7684;&#x4F4D;&#x7F6E;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x7684; fromindex &#x5904;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#xFF08;&#x6CA1;&#x6709;&#x6307;&#x5B9A; fromindex &#x65F6;&#xFF09;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x4E00;&#x4E2A; searchvalue&#xFF0C;&#x5219;&#x8FD4;&#x56DE; searchvalue &#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;stringObject &#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4F4D;&#x7F6E;&#x662F;&#x4ECE; 0 &#x5F00;&#x59CB;&#x7684;&#x3002;
+
+&#x63D0;&#x793A;&#x548C;&#x6CE8;&#x91CA;
+&#x6CE8;&#x91CA;&#xFF1A;indexOf() &#x65B9;&#x6CD5;&#x5BF9;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#xFF01;
+&#x6CE8;&#x91CA;&#xFF1A;&#x5982;&#x679C;&#x8981;&#x68C0;&#x7D22;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#xFF0C;&#x5219;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE; -1&#x3002;
+</pre>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#mybook">myBook</a></li>
+<li><a href="#%E5%9D%9A%E6%8C%81%E6%AF%8F%E5%A4%A9%E4%BD%BF%E7%94%A8%E7%90%89%E7%92%83%E8%AA%AAapp%E7%BB%83%E4%B9%A0%E8%8B%B1%E8%AF%AD-%E5%9D%9A%E6%8C%81">坚持每天使用琉璃說APP练习英语     ———坚持</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E7%AF%87">安装篇</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85ubuntu-1604%E7%B3%BB%E7%BB%9F">安装ubuntu 16.04系统</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85vscoed">安装vscoed</a></li>
+<li><a href="#%E5%9C%A8vscode%E4%B8%8A%E5%AE%89%E8%A3%85markdown%E6%8F%92%E4%BB%B6">在VScode上安装Markdown插件</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85git">安装git</a></li>
+<li><a href="#%E5%A4%8D%E4%B9%A0%E7%AF%87">复习篇</a>
+<ul>
+<li><a href="#1%E5%9C%A8w3cshool%E5%A4%8D%E4%B9%A0h5%E7%9A%84%E7%9F%A5%E8%AF%86">1.在w3cshool复习H5的知识</a></li>
+<li><a href="#2%E5%9C%A8w3cshool%E5%A4%8D%E4%B9%A0javascript%E7%9A%84%E7%9F%A5%E8%AF%86%E9%87%8D%E7%82%B9">2.在w3cshool复习JavaScript的知识（重点）</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E7%89%87">学习片</a>
+<ul>
+<li><a href="#1%E5%9C%A8w3cshool%E4%B8%AD%E5%AD%A6%E4%B9%A0%E5%A4%8D%E4%B9%A0bootstrap%E7%9A%84%E7%9F%A5%E8%AF%86">1.在w3cshool中学习复习Bootstrap的知识</a></li>
+<li><a href="#2%E5%9C%A8w3cshool%E4%B8%AD%E5%AD%A6%E4%B9%A0%E5%A4%8D%E4%B9%A0jquery%E7%9A%84%E7%9F%A5%E8%AF%86">2.在w3cshool中学习复习jQuery的知识</a></li>
+<li><a href="#3%E5%9C%A8w3cshool%E4%B8%AD%E5%AD%A6%E4%B9%A0%E5%A4%8D%E4%B9%A0%E5%88%9D%E7%BA%A7%E8%84%9A%E6%9C%AC%E7%AE%97%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86">3.在w3cshool中学习复习初级脚本算法的知识</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>

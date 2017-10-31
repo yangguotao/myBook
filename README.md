@@ -1,5 +1,5 @@
 # myBook
-#坚持每天使用琉璃說APP练习英语     ———坚持
+#坚持每天使用琉璃說APP练习英语     ———坚持   杨国涛
 ##安装篇
 ###安装ubuntu 16.04系统
 1.在ubuntu官网下载ubuntu 16.04ISO
@@ -9,8 +9,8 @@
 5.源更新方法
 ##安装vscoed
 1.在vscoed官网下载vscoed对应的版本安装
-##在VScode上安装Markdown插件 
-##安装git
+###在VScode上安装Markdown插件 
+###安装git
 1.安装git==》sudo apt-get install git-core
 2.一些全局变量的初始化
     在本地建立一个文件夹，然后做一些全局变量的初始化
