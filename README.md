@@ -1,13 +1,13 @@
 # myBook
-#坚持每天使用琉璃說APP练习英语     ———坚持   杨国涛
-##安装篇
-###安装ubuntu 16.04系统
+# 坚持每天使用琉璃說APP练习英语     ———坚持   杨国涛
+## 安装篇
+### 安装ubuntu 16.04系统
 1.在ubuntu官网下载ubuntu 16.04ISO
 2.利用u盘安装ubuntu 16.04系统
 3.安装路径
 4.空间分配
 5.源更新方法
-##安装vscoed
+## 安装vscoed
 1.在vscoed官网下载vscoed对应的版本安装
 ###在VScode上安装Markdown插件 
 ###安装git
